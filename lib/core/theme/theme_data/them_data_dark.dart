@@ -4,7 +4,7 @@ import '../app_colors.dart';
 import '../app_fonts.dart';
 import '../app_text_styles.dart';
 
-ThemeData getDarkTheme() {
+ThemeData getDarkTheme(BuildContext context) {
   return ThemeData(
     scaffoldBackgroundColor: AppColors.darkBackground,
     brightness: Brightness.dark,
@@ -15,18 +15,21 @@ ThemeData getDarkTheme() {
     ),
     textTheme: ThemeData.dark().textTheme.apply(
       bodyColor: AppColors.darkPrimary,
-      displayColor: AppColors.darkPrimary,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.darkSecondary,
+        backgroundColor: AppColors.darkBackground,
         foregroundColor: AppColors.darkPrimary,
-        disabledBackgroundColor: AppColors.grey800,
-        disabledForegroundColor: AppColors.grey400,
+        maximumSize: Size(double.infinity, 42),
+        minimumSize: Size(double.infinity, 42),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
+          side: const BorderSide(
+          color: AppColors.darkPrimary,
+          width: 1,
+        )
         ),
-        textStyle: AppTextStyles.amiri16,
+        textStyle: AppTextStyles.amiri16(context),
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
@@ -48,7 +51,7 @@ ThemeData getDarkTheme() {
           color: AppColors.darkPrimary,
         ),
       ),
-      hintStyle: AppTextStyles.amiri16.copyWith(color: AppColors.grey400),
+      hintStyle: AppTextStyles.amiri16(context).copyWith(color: AppColors.grey400),
     ),
   );
 }

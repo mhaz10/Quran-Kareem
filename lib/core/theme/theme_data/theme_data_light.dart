@@ -4,7 +4,7 @@ import '../app_colors.dart';
 import '../app_fonts.dart';
 import '../app_text_styles.dart';
 
-ThemeData getLightTheme() {
+ThemeData getLightTheme(BuildContext context) {
   return ThemeData(
     scaffoldBackgroundColor: AppColors.lightBackground,
     brightness: Brightness.light,
@@ -14,19 +14,22 @@ ThemeData getLightTheme() {
       brightness: Brightness.light,
     ),
     textTheme: ThemeData.light().textTheme.apply(
-      bodyColor: AppColors.grey900,
-      displayColor: AppColors.grey900,
+      bodyColor: AppColors.grey900
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.lightPrimary,
-        foregroundColor: AppColors.grey0,
-        disabledBackgroundColor: AppColors.grey100,
-        disabledForegroundColor: AppColors.grey0,
+        backgroundColor: AppColors.lightBackground,
+        foregroundColor: AppColors.grey900,
+        maximumSize: Size(double.infinity, 42),
+        minimumSize: Size(double.infinity, 42),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
+          side: BorderSide(
+            color: AppColors.grey900,
+            width: 1,
+          )
         ),
-        textStyle: AppTextStyles.amiri16,
+        textStyle: AppTextStyles.amiri16(context),
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
@@ -48,7 +51,7 @@ ThemeData getLightTheme() {
           color: AppColors.lightPrimary,
         ),
       ),
-      hintStyle: AppTextStyles.amiri16.copyWith(color: AppColors.grey400),
+      hintStyle: AppTextStyles.amiri16(context).copyWith(color: AppColors.grey400),
     ),
   );
 }

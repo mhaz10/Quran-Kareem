@@ -4,6 +4,8 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:quran_kareem/core/helper/responsive/extensions/size_helper_extension.dart';
 import 'package:quran_kareem/core/helper/responsive/size_provider.dart';
+import 'package:quran_kareem/core/routes/app_route.dart';
+import 'package:quran_kareem/core/routes/routes.dart';
 import 'package:quran_kareem/core/theme/cubit/theme_cubit.dart';
 import 'core/theme/theme_data/them_data_dark.dart';
 import 'core/theme/theme_data/theme_data_light.dart';
@@ -27,15 +29,21 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<ThemeCubit, ThemeMode>(
         builder: (context, themeMode) {
           return SizeProvider(
-            baseSize: const Size(375, 812),
+            baseSize: const Size(393, 852),
             width: context.width,
             height: context.height,
-            child: MaterialApp(
-              debugShowCheckedModeBanner: false,
-              title: 'Quran Kareem',
-              theme: getLightTheme(),
-              darkTheme: getDarkTheme(),
-              themeMode: themeMode,
+            child: Builder(
+              builder: (context) {
+                return MaterialApp(
+                  debugShowCheckedModeBanner: false,
+                  title: 'Quran Kareem',
+                  theme: getLightTheme(context),
+                  darkTheme: getDarkTheme(context),
+                  themeMode: themeMode,
+                  initialRoute: Routes.onboarding,
+                  onGenerateRoute: AppRouter.generateRoute,
+                );
+              }
             ),
           );
         },

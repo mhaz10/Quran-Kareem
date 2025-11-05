@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quran_kareem/core/routes/app_route.dart';
+import 'package:quran_kareem/core/routes/extensions/routing_extensions.dart';
+import 'package:quran_kareem/core/routes/routes.dart';
 import 'package:quran_kareem/core/theme/app_colors.dart';
 import 'package:quran_kareem/core/theme/app_text_styles.dart';
 import 'package:quran_kareem/core/utils/app_images.dart';
@@ -33,7 +36,9 @@ class OnboardingViewBody extends StatelessWidget {
           ),
           verticalSpace(20, context),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              context.pushReplacementNamed(Routes.home);
+            },
             child: Text('أبدأ الآن', style: AppTextStyles.amiri16(context)),
           ),
         ],

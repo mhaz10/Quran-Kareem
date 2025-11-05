@@ -3,12 +3,16 @@ import 'dart:ui';
 class AppColors {
   AppColors._();
 
+  static const Color quranCard = Color(0xff2C2C2C);
+  static const Color quranCardPlay = Color(0xff3A3A3A);
+
   // Light Primary colors
   static const Color lightBackground = Color(0xffFEFBF4);
   static const Color lightSecondary = Color(0xffF0E6D2);
   static const Color lightPrimary = Color(0xff795547);
   static const Color lightPaje = Color(0xffCC9B76);
   static const Color lightCardContent = Color(0xffFFE9C2);
+
 
 
   // Dark Primary colors

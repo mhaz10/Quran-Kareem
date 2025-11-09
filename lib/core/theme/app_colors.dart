@@ -12,6 +12,7 @@ class AppColors {
   static const Color lightPrimary = Color(0xff795547);
   static const Color lightPaje = Color(0xffCC9B76);
   static const Color lightCardContent = Color(0xffFFE9C2);
+  static const Color lightCaptions = Color(0xffA1A1A1);
 
 
 
@@ -21,6 +22,7 @@ class AppColors {
   static const Color darkPrimary = Color(0xffFFFFFF);
   static const Color darkPaje = Color(0xff8EADFF);
   static const Color darkCardContent = Color(0xffFFE9C2);
+  static const Color darkCaptions = Color(0xff675757);
 
   // grey scale
   static const grey900 = Color(0xff0d0d12);

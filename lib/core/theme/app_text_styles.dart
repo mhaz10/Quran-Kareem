@@ -21,6 +21,14 @@ class AppTextStyles {
     letterSpacing: 0,
   );
 
+  static TextStyle amiri12(BuildContext context) => TextStyle(
+    fontFamily: AppFonts.almarai,
+    fontSize: context.setSp(12),
+    fontWeight: FontWeight.normal,
+    letterSpacing: 0,
+    color: Theme.of(context).colorScheme.onTertiary,
+  );
+
   static TextStyle amiri13(BuildContext context) => TextStyle(
     fontFamily: AppFonts.almarai,
     fontSize: context.setSp(13),
@@ -32,6 +40,14 @@ class AppTextStyles {
   static TextStyle amiri14(BuildContext context) => TextStyle(
     fontFamily: AppFonts.almarai,
     fontSize: context.setSp(14),
+    fontWeight: FontWeight.normal,
+    letterSpacing: 0,
+    color: Theme.of(context).colorScheme.onSurface,
+  );
+
+  static TextStyle amiri15(BuildContext context) => TextStyle(
+    fontFamily: AppFonts.almarai,
+    fontSize: context.setSp(15),
     fontWeight: FontWeight.normal,
     letterSpacing: 0,
     color: Theme.of(context).colorScheme.onSurface,

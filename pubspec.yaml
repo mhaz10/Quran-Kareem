@@ -39,6 +39,7 @@ dependencies:
   hydrated_bloc: ^10.1.1
   path_provider: ^2.1.5
   carousel_slider: ^5.1.1
+  analog_clock: ^0.1.1
 
 dev_dependencies:
   flutter_test:

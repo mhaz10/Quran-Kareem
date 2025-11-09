@@ -14,6 +14,9 @@ ThemeData getLightTheme(BuildContext context) {
       onSurface: AppColors.lightPrimary,
       onSecondary: AppColors.lightCardContent,
       onPrimary: AppColors.lightPaje,
+      onPrimaryContainer: AppColors.lightSecondary,
+      onSecondaryContainer: AppColors.lightBackground,
+      onTertiary: AppColors.lightCaptions,
       brightness: Brightness.light,
     ),
     textTheme: ThemeData.light().textTheme.apply(

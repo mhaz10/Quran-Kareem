@@ -11,10 +11,20 @@ ThemeData getLightTheme(BuildContext context) {
     fontFamily: AppFonts.amiri,
     colorScheme: ColorScheme.fromSeed(
       seedColor: AppColors.lightPrimary,
+      onSurface: AppColors.lightPrimary,
+      onSecondary: AppColors.lightCardContent,
+      onPrimary: AppColors.lightPaje,
+      onPrimaryContainer: AppColors.lightSecondary,
+      onSecondaryContainer: AppColors.lightBackground,
+      onTertiary: AppColors.lightCaptions,
       brightness: Brightness.light,
     ),
     textTheme: ThemeData.light().textTheme.apply(
-      bodyColor: AppColors.grey900
+      bodyColor: AppColors.grey900,
+    ),
+    iconTheme: const IconThemeData(
+      color: AppColors.lightPrimary,
+      size: 24,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(

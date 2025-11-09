@@ -11,10 +11,20 @@ ThemeData getDarkTheme(BuildContext context) {
     fontFamily: AppFonts.amiri,
     colorScheme: ColorScheme.fromSeed(
       seedColor: AppColors.darkPrimary,
+      onSurface: AppColors.darkPrimary,
+      onSecondary: AppColors.darkCardContent,
+      onPrimary: AppColors.darkPaje,
+      onPrimaryContainer: AppColors.darkSecondary,
+      onSecondaryContainer: AppColors.darkBackground,
+      onTertiary: AppColors.darkCaptions,
       brightness: Brightness.dark,
     ),
     textTheme: ThemeData.dark().textTheme.apply(
       bodyColor: AppColors.darkPrimary,
+    ),
+    iconTheme: const IconThemeData(
+      color: AppColors.darkPrimary,
+      size: 24,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(

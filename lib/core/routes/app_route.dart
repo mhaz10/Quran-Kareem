@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran_kareem/core/routes/routes.dart';
-
+import '../../features/home/views/home_view.dart';
 import '../../features/onboarding/views/onboarding_view.dart';
 
 class AppRouter {
@@ -12,6 +12,10 @@ class AppRouter {
     switch (settings.name) {
       case Routes.onboarding:
         return MaterialPageRoute(builder: (_) => const OnboardingView());
+
+      case Routes.home:
+        return MaterialPageRoute(builder: (_) => const HomeView());
+
 
       default:
         return MaterialPageRoute(
